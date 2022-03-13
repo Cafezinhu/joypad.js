@@ -3,10 +3,11 @@
 import emitter from './emitter';
 import { EVENTS, AXIS_MOVEMENT_THRESHOLD } from './constants';
 import { log, hasVibrationSupport } from './helpers';
+import { Joypad } from './types/Joypad';
 
-const joypad = {
+const joypad: Joypad = {
     loopStarted: false,
-    instances: {},
+    instances: [],
     buttonEvents: {
         joypad: []
     },
@@ -29,12 +30,14 @@ const joypad = {
         }
     },
     vibrate: function (gamepadInstance, options) {
+        //@ts-ignore
         const { vibrationActuator } = gamepadInstance;
         const vibrationSettings = options ? options : this.settings.vibration;
 
         if (hasVibrationSupport(vibrationActuator)) {
             const { type } = vibrationActuator;
 
+            //@ts-ignore
             return gamepadInstance.vibrationActuator.playEffect(type, vibrationSettings);
         } else {
             log('No vibration actuator interface found - https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator');
@@ -42,7 +45,7 @@ const joypad = {
     },
     set: function (settings) {
         const { axisMovementThreshold, vibration, customButtonMapping } = settings;
-        const parsedValue = parseFloat(axisMovementThreshold);
+        const parsedValue = axisMovementThreshold;
 
         if (!isNaN(parsedValue)) {
             this.settings.axisMovementThreshold = parsedValue;

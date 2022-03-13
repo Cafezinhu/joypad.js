@@ -1,3 +1,5 @@
+This project is a fork of [joypad.js](https://github.com/ArunMichaelDsouza/joypad.js)
+
 <img src="https://github.com/ArunMichaelDsouza/joypad.js/blob/master/icon.png?raw=true" width="250" height="auto" alt="joypad.js icon"/>
 
 # joypad.js [![npm version](https://badge.fury.io/js/joypad.js.svg)](https://badge.fury.io/js/joypad.js) [![NPM Downloads](https://img.shields.io/npm/dm/joypad.js.svg?style=flat-square)](https://www.npmjs.com/package/joypad.js) [![Build Status](https://travis-ci.org/ArunMichaelDsouza/joypad.js.svg?branch=master)](https://travis-ci.org/ArunMichaelDsouza/joypad.js) <span class="badge-patreon"><a href="https://www.patreon.com/arunmichaeldsouza" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-blue.svg" alt="Patreon donate button" /></a></span>
@@ -318,7 +320,7 @@ npm test
 
 ## Support
 
-If you'd like to help support the development of the project, please consider backing me on Patreon -
+If you'd like to help support the development of the original project, please consider backing Arun Michael Dsouza on Patreon -
 
 [<img src="https://arunmichaeldsouza.com/img/patreon.png" width="180px;"/>](https://www.patreon.com/bePatron?u=8841116)
 

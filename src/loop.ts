@@ -6,6 +6,7 @@ import { listenToButtonEvents, listenToAxisMovements, handleButtonEvent } from '
 const loop = {
     id: null,
     start: function () {
+        //@ts-ignore
         const requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame;
         const { buttonEvents } = joypad;
         let gamepads = window.navigator.getGamepads();
@@ -16,7 +17,7 @@ const loop = {
             if (gamepad) {
                 // Initialise joypad instance events if not present
                 if (!buttonEvents.joypad[index]) {
-                    buttonEvents.joypad[index] = {};
+                    buttonEvents.joypad[index] = [];
                 }
 
                 // Update gamepad instance data
@@ -43,6 +44,7 @@ const loop = {
         this.id = requestAnimationFrame(this.start.bind(this));
     },
     stop: function (id) {
+        //@ts-ignore
         const cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancelAnimationFrame;
 
         return cancelAnimationFrame(id);
