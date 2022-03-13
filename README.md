@@ -2,23 +2,9 @@ This project is a fork of [joypad.js](https://github.com/ArunMichaelDsouza/joypa
 
 <img src="https://github.com/ArunMichaelDsouza/joypad.js/blob/master/icon.png?raw=true" width="250" height="auto" alt="joypad.js icon"/>
 
-# joypad.js [![npm version](https://badge.fury.io/js/joypad.js.svg)](https://badge.fury.io/js/joypad.js) [![NPM Downloads](https://img.shields.io/npm/dm/joypad.js.svg?style=flat-square)](https://www.npmjs.com/package/joypad.js) [![Build Status](https://travis-ci.org/ArunMichaelDsouza/joypad.js.svg?branch=master)](https://travis-ci.org/ArunMichaelDsouza/joypad.js) <span class="badge-patreon"><a href="https://www.patreon.com/arunmichaeldsouza" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-blue.svg" alt="Patreon donate button" /></a></span>
+# joypad.ts [![npm version](https://badge.fury.io/js/joypad.js.svg)](https://badge.fury.io/js/joypad.js) [![NPM Downloads](https://img.shields.io/npm/dm/joypad.js.svg?style=flat-square)](https://www.npmjs.com/package/joypad.js) [![Build Status](https://travis-ci.org/ArunMichaelDsouza/joypad.js.svg?branch=master)](https://travis-ci.org/ArunMichaelDsouza/joypad.js) <span class="badge-patreon"><a href="https://www.patreon.com/arunmichaeldsouza" title="Donate to original project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-blue.svg" alt="Patreon donate button" /></a></span>
 JavaScript library that lets you connect and use various gaming controllers with browsers that support the [Gamepad API](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API).
 > Less than 5KB in size with zero dependencies and support for button press, axis movement events and vibration play effect.
-
-<br/>
-
-## Examples
-
-Working examples can be found in the ``examples`` folder in the repo - 
-
-[connection.html](https://github.com/ArunMichaelDsouza/joypad.js/blob/master/examples/connection.html) - Gamepad connection example.
-
-[jumpingBall.html](https://github.com/ArunMichaelDsouza/joypad.js/blob/master/examples/jumpingBall.html) - Button press example (with custom button mapping).
-
-[movingBall.html](https://github.com/ArunMichaelDsouza/joypad.js/blob/master/examples/movingBall.html) - Axis (analog stick) movement example.
-
-[vibration.html](https://github.com/ArunMichaelDsouza/joypad.js/blob/master/examples/vibration.html) - Vibration play effect example.
 
 <br/>
 
@@ -27,34 +13,30 @@ Working examples can be found in the ``examples`` folder in the repo -
 #### via npm
 
 ```bash
-npm install joypad.js --save
+npm install https://github.com/Cafezinhu/joypad.js --save
 ```
 
 #### via yarn
 
 ```bash
-yarn add joypad.js
+yarn add https://github.com/Cafezinhu/joypad.js
 ```
-
-Or, [download](https://github.com/ArunMichaelDsouza/joypad.js/releases) the latest version and include ``joypad.min.js`` to your project.
 
 <br/>
 
-## Usage
-
-Once joypad.js is installed and included in your project it becomes available on the global scope - ``window.joypad``. 
+## Usage 
 
 If you're working with ``ES6`` or ``Common JS`` modules you can include the library as follows -
 
 ```javascript
-import 'joypad.js'; // ES6
+import { joypad } from 'joypad.ts'; // ES6
 ```
 
 ```javascript
-require('joypad.js'); // Common JS
+const { joypad } = require('joypad.ts'); // Common JS
 ```
 
-Once set up you can start listening to joypad.js events like so -
+Once set up you can start listening to joypad.ts events like so -
 
 ```javascript
 joypad.on('connect', e => {
@@ -298,16 +280,6 @@ joypad.set({
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Opera |
 | --------- | --------- | --------- | --------- | --------- |
 | 12+| 29+| 25+| 10.1+| 24+
-
-<br/>
-
-## Testing
-
-joypad.js uses the [jest](https://facebook.github.io/jest/) test runner. Run the following command to initiate it - 
-
-```bash
-npm test
-```
 
 <br/>
 
